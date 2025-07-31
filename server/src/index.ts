@@ -1,7 +1,8 @@
 import { Elysia } from "elysia";
 import swagger from "@elysiajs/swagger";
-import { usersController } from "./modules/users";
+import { usersController } from "@modules/users";
 
+// TODO: Add error handling
 const app = new Elysia({
     prefix: "/api/v1",
     normalize: true,
