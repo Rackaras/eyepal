@@ -1,11 +1,10 @@
-import { Elysia } from "elysia";
 import swagger from "@elysiajs/swagger";
+import { cors } from "@elysiajs/cors";
 import { usersController } from "@modules/users";
 import { app } from "@config/app";
-import { errorHandler } from "@config/errorHandling";
+import { errorHandler } from "@config/errorHandler";
 
-// TODO: Add generic response
-app.onError(errorHandler).use(usersController);
+app.onError(errorHandler).use(cors()).use(usersController);
 
 if (process.env.NODE_ENV === "development") {
     app.use(
