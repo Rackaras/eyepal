@@ -1,4 +1,4 @@
-import { Elysia, StatusMap } from "elysia";
+import { Elysia, NotFoundError, StatusMap } from "elysia";
 import { signUpRequestSchema } from "@modules/users/model";
 import { User } from "./service";
 
