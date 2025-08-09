@@ -1,12 +1,11 @@
 import { Elysia } from "elysia";
 import swagger from "@elysiajs/swagger";
 import { usersController } from "@modules/users";
+import { app } from "@config/app";
+import { errorHandler } from "@config/errorHandling";
 
-// TODO: Add error handling
-const app = new Elysia({
-    prefix: "/api/v1",
-    normalize: true,
-}).use(usersController);
+// TODO: Add generic response
+app.onError(errorHandler).use(usersController);
 
 if (process.env.NODE_ENV === "development") {
     app.use(

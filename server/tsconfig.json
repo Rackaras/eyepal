@@ -11,7 +11,9 @@
         "paths": {
             "@prisma/*": ["./prisma/generated/prisma/*"],
             "@models/*": ["./src/models/*"],
-            "@modules/*": ["./src/modules/*"]
+            "@modules/*": ["./src/modules/*"],
+            "@config/*": ["./src/config/*"],
+            "@errors/*": ["./src/errors/*"]
         } /* Specify a set of entries that re-map imports to additional lookup locations. */,
         "types": [
             "bun-types"
