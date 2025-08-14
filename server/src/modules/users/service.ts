@@ -17,6 +17,8 @@ export const User = {
             },
         });
 
+        console.log("existingUser", existingUser);
+
         if (existingUser) throw new InvalidRequestError("User already exists.");
 
         const hashedPassword = await hash(request.password, SALT_ROUNDS);
